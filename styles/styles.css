@@ -1,0 +1,181 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 120px;
+  background-color: #ffffff3e;
+  align-items: center;
+}
+
+.nav-links,
+.logo,
+.user {
+  display: flex;
+}
+
+.nav-links {
+  justify-content: space-evenly;
+  gap: 140px;
+}
+
+.user {
+  justify-content: center;
+  gap: 50px;
+}
+
+.hamburger {
+  display: none;
+}
+
+#mainContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.first-section {
+  position: relative;
+  width: 100%;
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/dog-walking-outside-with-owner-1556094638.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 80px;
+}
+
+.header-second-section {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.subheading-second-section {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.intro-second-section {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px 80px;
+  word-spacing: 2px;
+  line-height: 1.4;
+}
+
+.button-second-section {
+  display: flex;
+  justify-content: center;
+}
+
+.button-entry-second-section {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.604);
+  position: relative;
+  text-decoration: none;
+}
+
+.button-entry-second-section:hover {
+  transform: translateY(-4px);
+}
+
+.button-entry-second-section:active {
+  transform: translateY(2px);
+}
+
+.sidebar {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .header {
+    grid-template-columns: auto 1fr auto;
+    padding: 10px;
+  }
+
+  .nav-links,
+  .user {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger-closing {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .logo {
+    justify-content: center;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 999;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar .nav-links,
+  .sidebar .user {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  .second-section {
+    padding: 10px 10px;
+  }
+  .header-second-section {
+    font-size: 25px;
+  }
+  .subheading-second-section {
+    font-size: 20px;
+  }
+  .intro-second-section {
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+}

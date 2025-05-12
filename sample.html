@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toggle Sidebar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Sidebar hidden by default */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: white;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      padding: 20px;
+      box-sizing: border-box;
+      z-index: 1000;
+    }
+
+    /* Sidebar visible when .open is added */
+    #sidebar.open {
+      transform: translateX(0);
+    }
+
+    #sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 15px 0;
+    }
+
+    #main {
+      padding: 20px;
+      transition: margin-left 0.3s ease;
+    }
+
+    #main.shifted {
+      margin-left: 250px;
+    }
+
+    #toggle {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      padding: 10px 15px;
+      font-size: 16px;
+      background: #ff5c5c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggle">☰ Menu</button>
+
+  <div id="sidebar">
+    <h2>Sidebar</h2>
+    <a href="#">Home</a>
+    <a href="#">Profile</a>
+    <a href="#">Settings</a>
+  </div>
+
+  <div id="main">
+    <h1>Welcome!</h1>
+    <p>This is your main content. Use the button to open/close the sidebar.</p>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.getElementById('main');
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');  // open/close sidebar
+      main.classList.toggle('shifted');  // shift main content
+    });
+  </script>
+
+</body>
+</html>
