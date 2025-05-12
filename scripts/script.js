@@ -1,11 +1,18 @@
-const hamburgerOpening = document.querySelector('.hamburger');
-const sidebar = document.querySelector('.sidebar');
-const hamburgerClosing = document.querySelector('.hamburger-closing');
+fetch("../html/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    document.getElementById("header-placeholder").innerHTML = data;
 
-hamburgerOpening.addEventListener('click', () => {
-  sidebar.classList.toggle('open'); 
-});
+    // Optional: re-bind sidebar events after loading
+    const hamburger = document.querySelector(".hamburger");
+    const sidebar = document.querySelector(".sidebar");
+    const closeBtn = document.querySelector(".hamburger-closing");
 
-hamburgerClosing.addEventListener('click', () => {
-  sidebar.classList.toggle('open');
-});
+    hamburger?.addEventListener("click", () => {
+      sidebar.classList.add("open");
+    });
+
+    closeBtn?.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+    });
+  });
