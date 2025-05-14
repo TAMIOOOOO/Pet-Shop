@@ -11,23 +11,56 @@
   </head>
   <body>
     <div id="header-placeholder"></div>
-
     <div id="adoption-form-container">
-      <h2>ADOPTION APPLICATION</h2>
+      <div class="image-adoption-slider-container">
+        <div class="left-slider slider" onclick="changeSlide(-1)">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271220.png"
+            alt="Previous"
+          />
+        </div>
+
+        <div class="image-container">
+          <img
+            id="sliderImage"
+            src="/ADOPTBUDDY-removebg-preview.png"
+            alt="Adoption Image"
+          />
+        </div>
+
+        <div class="right-slider slider" onclick="changeSlide(1)">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+            alt="Next"
+          />
+        </div>
+      </div>
+
       <div class="adoption-form">
-        <form action="">
+        <h2>ADOPTION APPLICATION</h2>
+        <form id="myForm" action="">
           <div class="name">
             <label for="name">Name </label>
             <div class="name-inputs">
-              <input required type="text" placeholder="First" />
-              <input required type="text" placeholder="Last" />
+              <input
+                required
+                class="firstNameInput"
+                type="text"
+                placeholder="First"
+              />
+              <input
+                required
+                class="lastNameInput"
+                type="text"
+                placeholder="Last"
+              />
             </div>
           </div>
 
           <div class="Address">
             <label for="address">Address</label>
             <div class="address-input">
-              <input required type="text" class="text" />
+              <input required type="text" class="addressInput" />
             </div>
           </div>
 
@@ -35,14 +68,14 @@
             <div class="phone">
               <label for="phone">Phone</label>
               <div class="phone-input">
-                <input required type="tel" />
+                <input required class="phoneNumberInput" type="tel" />
               </div>
             </div>
 
             <div class="email">
-              <label for="email">email</label>
+              <label for="email">Email</label>
               <div class="email-input">
-                <input required type="email" />
+                <input required class="emailInput" type="email" />
               </div>
             </div>
           </div>
@@ -51,14 +84,14 @@
             <div class="birthdate">
               <label for="birthdate">Birth Date</label>
               <div class="birthdate-input">
-                <input required type="date" />
+                <input required class="birthdayInput" type="date" />
               </div>
             </div>
 
             <div class="occupation">
               <label for="occupation">Occupation</label>
               <div class="occupation-input">
-                <input required type="text" />
+                <input required class="occupationInput" type="text" />
               </div>
             </div>
           </div>
@@ -67,14 +100,19 @@
             <div class="company">
               <label for="company">Company/Business Name</label>
               <div class="company-input">
-                <input required type="text" />
+                <input required type="text" class="companyInput" />
               </div>
             </div>
 
             <div class="social">
               <label for="social">Social Media Profile</label>
               <div class="social-input">
-                <input required type="url" placeholder="Enter Fb/Twitter/IG Link" />
+                <input
+                  required
+                  class="socialInput"
+                  type="url"
+                  placeholder="Enter Fb/Twitter/IG Link"
+                />
               </div>
             </div>
           </div>
@@ -83,35 +121,59 @@
             <div class="status">
               <label for="status">Status</label>
               <div class="status-input">
-                <label for="Single"
-                  ><input
+                <label for="single">
+                  <input
                     type="radio"
                     name="marital-status"
                     id="single"
-                  />Single</label
-                >
-                <label for="Single"
-                  ><input
+                    value="Single"
+                  />
+                  <p>Single</p>
+                </label>
+                <label for="married">
+                  <input
                     type="radio"
                     name="marital-status"
-                    id="single"
-                  />Married</label
-                >
-                <label for="Single"
-                  ><input
+                    id="married"
+                    value="Married"
+                  />
+                  <p>Married</p>
+                </label>
+                <label for="student">
+                  <input
                     type="radio"
                     name="marital-status"
-                    id="single"
-                  />Others</label
-                >
+                    id="student"
+                    value="Student"
+                  />
+                  <p>Student</p>
+                </label>
               </div>
             </div>
 
             <div class="history">
               <label for="">Have you adopted from PAWS before?</label>
               <div class="history-input">
-                <label for=""><input required type="radio" name="history" />Yes</label>
-                <label for=""><input required type="radio" name="history" />No</label>
+                <label for=""
+                  ><input
+                    required
+                    type="radio"
+                    name="history"
+                    class="history"
+                  />
+                  <p>Yes</p>
+                  </label
+                >
+                <label for=""
+                  ><input
+                    required
+                    type="radio"
+                    name="history"
+                    class="history"
+                  />
+                  <p>No</p>
+                  </label
+                >
               </div>
             </div>
           </div>
@@ -119,8 +181,18 @@
           <div class="alternate">
             <label for="">Alternate Contact</label>
             <div class="alternate-input">
-              <input required type="text" placeholder="First name" />
-              <input required type="text" placeholder="Last name" />
+              <input
+                required
+                type="text"
+                placeholder="First name"
+                class="altContactFirstNameInput"
+              />
+              <input
+                required
+                type="text"
+                placeholder="Last name"
+                class="altContactLastNameInput"
+              />
             </div>
           </div>
 
@@ -128,20 +200,30 @@
             <div class="relationship">
               <label for="">Relationship</label>
               <div class="relationship-input">
-                <input required type="text" />
+                <input class="relationship" required type="text" />
               </div>
             </div>
 
             <div class="phone">
               <label for="">Phone</label>
               <div class="phone-input">
-                <input required type="tel" />
+                <input class="relationshipPhone" required type="tel" />
               </div>
             </div>
+          </div>
+          <div class="button">
+            <button onclick="formValidation();">SUBMIT</button>
           </div>
         </form>
       </div>
     </div>
+    <div class="submitted-modal">
+        <div class="modal">
+            <h1>The form is submitted</h1>
+            <img src="https://cdn-icons-png.flaticon.com/128/19003/19003066.png" alt="">
+        </div>
+    </div>
+    <script src="/scripts/adoption-form.js"></script>
     <script src="/scripts/script.js" async defer></script>
   </body>
 </html>

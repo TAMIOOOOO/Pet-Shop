@@ -11,7 +11,7 @@ function renderingPetCards() {
     petCardContainerHTML += `
       <div class="pet-card-container">
         <div class="pet-card">
-          <img src="${pet.image}" alt="${pet.Name}" />
+          <img src="${pet.images[0]}" alt="${pet.Name}" />
           <div class="knowMore">
             <a href="javascript:void(0)" id="${btnId}">KnowMore</a>
           </div>
@@ -19,17 +19,20 @@ function renderingPetCards() {
         <div class="pet-name">${pet.Name}</div>
         </div>
 
-        <!-- Modal for this pet -->
         <div id="${modalId}" class="modal">
           <div class="modal-content">
             <span id="${closeBtnId}" class="close-btn">&times;</span>
             <h2>${pet.Name}</h2>
             <p>It is ${pet.age} years old.</p>
-            <button><a href='/html/adoption-form.html'>Adopt</a></button>
+            <button><a id="adoptBtn-${pet.id}" href='/html/adoption-form.html'>Adopt</a></button>
           </div>
         </div>
     `;
+
+
   });
+
+
 
   document.querySelector('.pets-section-container').innerHTML = petCardContainerHTML;
 
@@ -46,10 +49,16 @@ function renderingPetCards() {
       modal.style.display = 'none';
     });
 
+
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
       }
     });
+    const adoptBtn = document.getElementById(`adoptBtn-${pet.id}`);
+    adoptBtn.addEventListener('click', () => {
+      localStorage.setItem('selectedPetImages', JSON.stringify(pet.images));
+    });
   });
 }
+

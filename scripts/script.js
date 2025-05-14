@@ -3,7 +3,6 @@ fetch("../html/header.html")
   .then((data) => {
     document.getElementById("header-placeholder").innerHTML = data;
 
-    // Optional: re-bind sidebar events after loading
     const hamburger = document.querySelector(".hamburger");
     const sidebar = document.querySelector(".sidebar");
     const closeBtn = document.querySelector(".hamburger-closing");

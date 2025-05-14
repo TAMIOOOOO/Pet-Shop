@@ -1,44 +1,83 @@
 const pets = [
-  { id: 1, Name: 'Borge', species: 'dog', age: 2, isAvailable: true, image: 'https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*' },
-  { id: 2, Name: 'Max', species: 'dog', age: 3, isAvailable: true, image: 'https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/45ed8ecf-0bb2-4e34-8fcf-624db47c43c8/Golden+Retrievers+dans+pet+care.jpeg' },
-  { id: 3, Name: 'Buddy', species: 'dog', age: 5, isAvailable: true, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgDFp3dmPTGj1xOEuSlAt-ilTfBOmYfth5hQ&s' },
-  { id: 4, Name: 'Charlie', species: 'dog', age: 1, isAvailable: true, image: '' },
-  { id: 5, Name: 'Rocky', species: 'dog', age: 4, isAvailable: true, image: '' },
-  { id: 6, Name: 'Jack', species: 'dog', age: 6, isAvailable: true, image: '' },
-  { id: 7, Name: 'Toby', species: 'dog', age: 3, isAvailable: true, image: '' },
-  { id: 8, Name: 'Duke', species: 'dog', age: 7, isAvailable: true, image: '' },
-  { id: 9, Name: 'Bear', species: 'dog', age: 2, isAvailable: true, image: '' },
-  { id: 10, Name: 'Lucky', species: 'dog', age: 4, isAvailable: true, image: '' },
-  { id: 11, Name: 'Leo', species: 'dog', age: 3, isAvailable: true, image: '' },
-  { id: 12, Name: 'Oscar', species: 'dog', age: 6, isAvailable: true, image: '' },
-  { id: 13, Name: 'Winston', species: 'dog', age: 5, isAvailable: true, image: '' },
-  { id: 14, Name: 'Murphy', species: 'dog', age: 2, isAvailable: true, image: '' },
-  { id: 15, Name: 'Dexter', species: 'dog', age: 7, isAvailable: true, image: '' },
-  { id: 16, Name: 'Bruno', species: 'dog', age: 4, isAvailable: true, image: '' },
-  { id: 17, Name: 'Gus', species: 'dog', age: 5, isAvailable: true, image: '' },
-  { id: 18, Name: 'Rex', species: 'dog', age: 1, isAvailable: true, image: '' },
-  { id: 19, Name: 'Otis', species: 'dog', age: 3, isAvailable: true, image: '' },
-  { id: 20, Name: 'Zeus', species: 'dog', age: 6, isAvailable: true, image: '' },
+  {
+    id: 1, Name: 'Borge', species: 'dog', age: 2, isAvailable: true,
+    images: ['/image.png', '/ADOPTBUDDY-removebg-preview.png', '/image.png']
+  },
+  {
+    id: 2, Name: 'Max', species: 'dog', age: 3, isAvailable: true,
+    images: ['https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/45ed8ecf-0bb2-4e34-8fcf-624db47c43c8/Golden+Retrievers+dans+pet+care.jpeg']
+  },
+  {
+    id: 3, Name: 'Buddy', species: 'dog', age: 5, isAvailable: true,
+    images: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgDFp3dmPTGj1xOEuSlAt-ilTfBOmYfth5hQ&s']
+  },
+  {
+    id: 4, Name: 'Charlie', species: 'dog', age: 1, isAvailable: true,
+    images: []
+  },
+  {
+    id: 5, Name: 'Rocky', species: 'dog', age: 4, isAvailable: true,
+    images: []
+  },
+  {
+    id: 6, Name: 'Jack', species: 'dog', age: 6, isAvailable: true,
+    images: []
+  },
+  {
+    id: 7, Name: 'Toby', species: 'dog', age: 3, isAvailable: true,
+    images: []
+  },
+  {
+    id: 8, Name: 'Duke', species: 'dog', age: 7, isAvailable: true,
+    images: []
+  },
+  {
+    id: 9, Name: 'Bear', species: 'dog', age: 2, isAvailable: true,
+    images: []
+  },
+  {
+    id: 10, Name: 'Lucky', species: 'dog', age: 4, isAvailable: true,
+    images: []
+  },
 
-  // 20 Cats
-  { id: 21, Name: 'Luna', species: 'cat', age: 3, isAvailable: true, image: '' },
-  { id: 22, Name: 'Bella', species: 'cat', age: 2, isAvailable: true, image: '' },
-  { id: 23, Name: 'Kitty', species: 'cat', age: 4, isAvailable: true, image: '' },
-  { id: 24, Name: 'Oliver', species: 'cat', age: 5, isAvailable: true, image: '' },
-  { id: 25, Name: 'Leo', species: 'cat', age: 1, isAvailable: true, image: '' },
-  { id: 26, Name: 'Milo', species: 'cat', age: 6, isAvailable: true, image: '' },
-  { id: 27, Name: 'Loki', species: 'cat', age: 2, isAvailable: true, image: '' },
-  { id: 28, Name: 'Simba', species: 'cat', age: 3, isAvailable: true, image: '' },
-  { id: 29, Name: 'Chloe', species: 'cat', age: 4, isAvailable: true, image: '' },
-  { id: 30, Name: 'Nala', species: 'cat', age: 5, isAvailable: true, image: '' },
-  { id: 31, Name: 'Lucy', species: 'cat', age: 2, isAvailable: true, image: '' },
-  { id: 32, Name: 'Zoe', species: 'cat', age: 1, isAvailable: true, image: '' },
-  { id: 33, Name: 'Lily', species: 'cat', age: 3, isAvailable: true, image: '' },
-  { id: 34, Name: 'Mochi', species: 'cat', age: 4, isAvailable: true, image: '' },
-  { id: 35, Name: 'Cleo', species: 'cat', age: 6, isAvailable: true, image: '' },
-  { id: 36, Name: 'Tigger', species: 'cat', age: 5, isAvailable: true, image: '' },
-  { id: 37, Name: 'Oreo', species: 'cat', age: 2, isAvailable: true, image: '' },
-  { id: 38, Name: 'Shadow', species: 'cat', age: 3, isAvailable: true, image: '' },
-  { id: 39, Name: 'Pumpkin', species: 'cat', age: 4, isAvailable: true, image: '' },
-  { id: 40, Name: 'Boots', species: 'cat', age: 6, isAvailable: true, image: '' }
+  {
+    id: 21, Name: 'Luna', species: 'cat', age: 3, isAvailable: true,
+    images: []
+  },
+  {
+    id: 22, Name: 'Bella', species: 'cat', age: 2, isAvailable: true,
+    images: []
+  },
+  {
+    id: 23, Name: 'Kitty', species: 'cat', age: 4, isAvailable: true,
+    images: []
+  },
+  {
+    id: 24, Name: 'Oliver', species: 'cat', age: 5, isAvailable: true,
+    images: []
+  },
+  {
+    id: 25, Name: 'Leo', species: 'cat', age: 1, isAvailable: true,
+    images: []
+  },
+  {
+    id: 26, Name: 'Milo', species: 'cat', age: 6, isAvailable: true,
+    images: []
+  },
+  {
+    id: 27, Name: 'Loki', species: 'cat', age: 2, isAvailable: true,
+    images: []
+  },
+  {
+    id: 28, Name: 'Simba', species: 'cat', age: 3, isAvailable: true,
+    images: []
+  },
+  {
+    id: 29, Name: 'Chloe', species: 'cat', age: 4, isAvailable: true,
+    images: []
+  },
+  {
+    id: 30, Name: 'Nala', species: 'cat', age: 5, isAvailable: true,
+    images: []
+  }
 ];
