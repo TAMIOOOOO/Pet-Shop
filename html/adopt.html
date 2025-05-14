@@ -7,10 +7,40 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/styles/header-sidebar.css" />
+    <link rel="stylesheet" href="/styles/adopt.css" />
   </head>
   <body>
     <div id="header-placeholder"></div>
 
+    <div id="main-section">
+      <div class="pet-section-start-container">
+        <div class="pets-section-container">
+          <div class="pet-card-container">
+            <div class="pet-card">
+              <img
+                src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+                alt=""
+              />
+              <div class="knowMore">
+                <a href="javascript:void(0)" id="knowMoreBtn">KnowMore</a>
+              </div>
+            </div>
+            <div class="pet-name">Pet1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <h2 id="modalPetName"></h2>
+        <p id="modalPetAge"></p>
+        <button>Adopt</button>
+      </div>
+    </div>
+    <script src="/data/petData.js"></script>
+    <script src="/scripts/adopt.js"></script>
     <script src="/scripts/script.js"></script>
   </body>
 </html>

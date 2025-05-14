@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#adoption-form-container {
+    background-color: #B0D0D3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.adoption-form {
+    background-color: red;
+    padding: 20px 10px 20px 10px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.birthdate-occupation input  {
+    width: 100%;
+}
+
+.adoption-form input {
+    margin-bottom: 10px;
+    outline: 0;
+    border: 0px solid transparent;
+    border-bottom: 2px solid black;
+    padding: 5px 5px 2px 5px;
+    height: 20px;
+}
+
+.status-input, .history-input, .address-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.birthdate input {
+    padding: 0px 32px;
+    position: relative;
+    bottom: .5px;
+}
+
+.phone-email, .birthdate-occupation, .company-social, .status-history, .relationship-phone {
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+ 
