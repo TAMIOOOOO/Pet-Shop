@@ -1,7 +1,7 @@
 const pets = [
   {
     id: 1, Name: 'Borge', species: 'dog', age: 2, isAvailable: true,
-    images: ['/image.png', '/ADOPTBUDDY-removebg-preview.png', '/image.png']
+    images: []
   },
   {
     id: 2, Name: 'Max', species: 'dog', age: 3, isAvailable: true,

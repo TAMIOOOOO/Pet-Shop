@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/styles/header-sidebar.css" />
     <link rel="stylesheet" href="/styles/adoption-form.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div id="header-placeholder"></div>
@@ -162,8 +163,7 @@
                     class="history"
                   />
                   <p>Yes</p>
-                  </label
-                >
+                </label>
                 <label for=""
                   ><input
                     required
@@ -172,8 +172,7 @@
                     class="history"
                   />
                   <p>No</p>
-                  </label
-                >
+                </label>
               </div>
             </div>
           </div>
@@ -215,14 +214,20 @@
             <button onclick="formValidation();">SUBMIT</button>
           </div>
         </form>
+        <button id="alertBtn" onclick="init();">submit</button>
       </div>
     </div>
     <div class="submitted-modal">
-        <div class="modal">
-            <h1>The form is submitted</h1>
-            <img src="https://cdn-icons-png.flaticon.com/128/19003/19003066.png" alt="">
-        </div>
+      <div class="modal">
+        <h1>The form is submitted</h1>
+        <p>Returning you back to the adoption page</p>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/19003/19003066.png"
+          alt=""
+        />
+      </div>
     </div>
+     Add picture<input type="file" accept=".jpg, .png">
     <script src="/scripts/adoption-form.js"></script>
     <script src="/scripts/script.js" async defer></script>
   </body>

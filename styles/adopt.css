@@ -14,7 +14,6 @@
 }
 
 .pet-section-start-container {
-    background-color: gray;
     display: flex;
     justify-content: center;
 }
@@ -22,7 +21,6 @@
 .pets-section-container {
   display: flex;
   justify-content: center;
-  background-color: blue;
   width: 100%;
   padding: 10px 20px;
   flex-wrap: wrap;
@@ -32,7 +30,6 @@
 .pet-card-container {
   width: 200px;
   height: 200px;
-  background-color: aqua;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -44,13 +41,13 @@
   position: relative;
   width: 100%;
   height: 93%;
-  background-color: red;
   border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 0;
-  overflow: hidden; /* ensures overlay stays within bounds */
+  border: 1px black solid;
+  overflow: hidden; 
 }
 
 .pet-card img {

@@ -1,0 +1,43 @@
+.main-body-container {
+  background-color: gray;
+  padding: 20px;
+}
+
+.main-container-contacts {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.donating-contact-information-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+}
+
+.video-container {
+  background-color: aqua;
+  padding: 20px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+
+  .donating-contact-information-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

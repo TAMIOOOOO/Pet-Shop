@@ -53,21 +53,42 @@ function formValidation() {
             alert('Please enter a 10 digit number');
         }
 
-        alert('Form is valid and ready to submit!');
-        setTimeout(3000);
+        submittedModal();
     });
-    submittedModal();
 
 }
+
+
+function init() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("alertBtn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        Swal.fire({
+          title: 'Image Alert!',
+          text: 'All inside one function!',
+          imageUrl: '',
+          imageWidth: 150,
+          imageHeight: 150,
+          imageAlt: 'Nice image'
+        });
+      });
+    }
+  });
+}
+
+init();
+
+
 
 function submittedModal() {
     const Smodal = document.querySelector('.submitted-modal');
     Smodal.style.display = 'flex';
 
-    setTimeout(function() {
+    setTimeout(function () {
         window.location.href = '/html/adopt.html';
-    }, 2000)
+    }, 3000)
 
     console.log('error in modal');
-    
+
 }

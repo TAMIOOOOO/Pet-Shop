@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main-container-body {
+  background-color: aqua;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+#alans-section {
+  background-image: url("");
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.background-section-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.image-section {
+  background-image: url("/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.name-section {
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    top: 120px;
+    letter-spacing: 2px;
+    font-size: 50px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.399);
+  width: 100%;
+  height: 100%;
+}

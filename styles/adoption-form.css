@@ -15,7 +15,6 @@
 }
 
 .adoption-form {
-  background-color: red;
   padding: 20px 10px 20px 10px;
   display: flex;
   flex-direction: column;
@@ -37,7 +36,6 @@
 }
 
 .image-adoption-slider-container {
-  background-color: violet;
   width: 100%;
   height: 100%;
   display: flex;
@@ -55,7 +53,6 @@ label {
   overflow: hidden;
   height: 50%;
   width: 50%;
-  background-color: blue;
 }
 
 .image-container img {
@@ -65,7 +62,6 @@ label {
 }
 
 .right-slider, .left-slider {
-  background-color: gray;
   cursor: pointer;
 }
 
