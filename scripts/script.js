@@ -15,3 +15,9 @@ fetch("../html/header.html")
       sidebar.classList.remove("open");
     });
   });
+
+const  Inputs =  document.querySelectorAll("input");
+
+Inputs?.addEventListener("click", () => {
+  
+});

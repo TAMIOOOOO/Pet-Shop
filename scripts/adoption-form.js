@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
 function changeSlide(direction) {
     if (images.length === 0) return;
 
