@@ -6,7 +6,7 @@
 
 #main-section {
   position: relative;
-  background-color: aliceblue;
+  background-color: white;
   height: 100%;
   padding: 10px 80px;
   display: flex;
@@ -14,8 +14,8 @@
 }
 
 .pet-section-start-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .pets-section-container {
@@ -47,7 +47,7 @@
   align-items: center;
   z-index: 0;
   border: 1px black solid;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .pet-card img {
@@ -71,7 +71,6 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 100;
-  
 }
 
 .pet-card:hover .knowMore {
@@ -80,27 +79,58 @@
 }
 
 .modal {
-  display: none;  
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
   padding-top: 60px;
   transition: opacity 0.3s ease;
-}  
+}
 
 .modal-content {
-  background-color: white;
+  background-color: pink;
   margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; 
-  max-width: 500px; 
+  border: 10px solid #0000007b;
+  width: 80%;
+  max-width: 500px;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.modal-content button {
+  background-color: pink;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 5px 20px;
+  width: 90px;
+  font-family: 'catLogoFont';
+}
+
+.modal-content button:hover {
+  background-color: yellow;
+}
+
+.modal-content span {
+  display: flex;
+  justify-content: end;
+}
+
+.modal-quality {
+  background-color: rgb(239, 146, 146);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 10px;
 }
 
 .close-btn {
@@ -116,6 +146,32 @@
   color: black;
   text-decoration: none;
 }
+
+.modal-content h2 {
+  font-family: "catLogoFont";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 
 @media (max-width: 1400px) {
   .pet-card-container {

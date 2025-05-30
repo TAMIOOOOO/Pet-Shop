@@ -1,43 +1,107 @@
-.main-body-container {
-  background-color: gray;
-  padding: 20px;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.main-container-contacts {
-  padding: 20px;
+body {
+  font-family: "catLogoFont";
+}
+
+#main-container {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 94vh;
+  overflow: hidden;
+}
+
+.main-header {
+  font-size: 2em;
+}
+
+.content-container {
+  position: relative;
+  top: 50px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.donating-contact-information-grid-container {
+.sub-content-grid {
+  height: 80vh;
+  width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
-.contact-info {
-  margin-bottom: 20px;
+.sides-content,
+.center-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
 }
 
-.contact-info p {
-  margin-bottom: 5px;
-}
-
-.video-container {
-  background-color: aqua;
-  padding: 20px;
-}
-
-.video-container iframe {
-  width: 100%;
+.center-content-container {
   height: 100%;
+  align-items: center;
 }
 
-@media (max-width: 1200px) {
+.center-content {
+  align-items: center;
+  justify-content: center;
+}
 
-  .donating-contact-information-grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+.center-content img {
+  position: relative;
+  top: 0;
+  height: 300px;
+  transition: top 1000ms ease;
+}
+
+.sides-content img {
+  position: relative;
+  top: 0;
+  height: 400px;
+}
+
+.center-content-a {
+  display: none;
+  font-size: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-content-a a:hover{
+  display: flex;
+  color: white;
+}
+
+.center-content-a:hover .redirect-container {
+  display: flex;
+}
+
+.center-content:hover .center-content-a {
+  display: flex;
+}
+
+.redirect-container {
+  background: white;
+  position: absolute;
+  left: 250px;
+  font-size: 12px;
+  font-family: 'catLogoFont';
+  margin-left: 20px;
+  padding: 5px;
+  width: 200px  ;
+  border: 3px black solid;
+  border-radius: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

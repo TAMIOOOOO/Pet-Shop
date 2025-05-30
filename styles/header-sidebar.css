@@ -1,7 +1,22 @@
+@font-face {
+  font-family: 'catLogoFont';
+  src: url('/fonts/KiddosyfreeRegular-GOEag.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'catLogoFontwCat';
+  src: url('/fonts/KiddosyfreeRegular-GOEag.otf') format('opentype');
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .header {
@@ -11,6 +26,16 @@
   padding: 20px 120px;
   background-color: #ffffff3e;
   align-items: center;
+}
+
+.logo {
+  font-family: 'catLogoFont';
+  font-size: 23px;
+}
+
+.nav-links, .user {
+  font-family: 'catLogoFont';
+  font-size: 15px;
 }
 
 .nav-links,

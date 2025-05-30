@@ -1,30 +1,26 @@
+const KnowmoreBtn = document.querySelector(".knowMoreBtn");
+const subContent = document.querySelector(".sub-content");
+const name_h1 = document.querySelector(".Name_h1");
 
-const nameSection = document.getElementById ("name-section");
-const nameUnhovered = document.querySelector('.h1');
-
-
-nameUnhovered.addEventListener('mouseenter', () => {
-    nameUnhovered.classList.add("fading");
-
-    setTimeout(()=> {
-        nameUnhovered.innerHTML = `<span>A</span>lan <span>T</span>amio`;
-        nameUnhovered.classList.remove("fading");
-    }, 200);
+KnowmoreBtn.addEventListener('click', () => {
+    subContent.classList.toggle('open');
+    KnowmoreBtn.textContent = 'Know Less'
 });
 
-nameUnhovered.addEventListener('mouseleave', () => {
-    nameUnhovered.classList.add("fading");
+name_h1.addEventListener('mouseenter', () => {
+    name_h1.classList.add('fading');
+    console.log('mouse enter');
 
     setTimeout(() => {
-        nameUnhovered.innerHTML = "<span>A</span>T";
-        nameUnhovered.classList.remove("fading");        
-    }, 200);
+        name_h1.innerHTML = `<span>A</span>lan <span>T</span>amio`;
+        name_h1.classList.remove('fading');
+    },300);
 });
 
-function nameSectionMove() {
-    const button = document.querySelector(".buttonMove");
-
-    button.addEventListener('mouseenter',()=> {
-       nameUnhovered.classList.add("newPosition"); 
-    });
-};
+name_h1.addEventListener('mouseleave', () => {
+    name_h1.classList.add('fading');    
+    setTimeout(() => {
+        name_h1.innerHTML = `<span>A.</span>T.`;
+        name_h1.classList.remove('fading');
+    },300);
+})

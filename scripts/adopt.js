@@ -23,8 +23,13 @@ function renderingPetCards() {
           <div class="modal-content">
             <span id="${closeBtnId}" class="close-btn">&times;</span>
             <h2>${pet.Name}</h2>
-            <p>It is ${pet.age} years old.</p>
+            <p>Gender: ${pet.Gender}</p>
+            <p>Age: ${pet.age} years old</p>
+            <p>Specie: ${pet.species} </p>
+            <div class="modal-quality"> <p>${pet.Name} is a ${pet.quality} </p> </div>
+            <div class="modal-button">
             <button><a id="adoptBtn-${pet.id}" href='/html/adoption-form.html'>Adopt</a></button>
+            </div>
           </div>
         </div>
     `;
