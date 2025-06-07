@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Log In Form</title>
+
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="stylesheet" href="/styles/header-sidebar.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <div class="login-container-main">
+      <div class="login-container">
+        <h3>LOG IN TO GET STARTED</h3>
+        <form id="loginForm">
+          Email Address*<br />
+          <input type="email" id="email" placeholder="Enter a valid email" />
+          Password <br />
+          <input type="password" id="password" placeholder="Password" />
+          <label class="show-password">
+            <input type="checkbox" id="togglePassword" onclick="togglePasswordOne()"/>Show Password
+          </label>
+
+          <div class="error" id="errorMsg"></div>
+          <button type="submit"><b>LOG IN</b></button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/login.js"></script>
+  </body>
+</html>

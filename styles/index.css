@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#mainContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+  z-index: 100;
+}
+
+.first-section {
+  position: relative;
+  width: 100%;
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/dog-walking-outside-with-owner-1556094638.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 20px 80px;
+  position: relative;
+  align-items: center;
+}
+
+.second-section-overlay {
+  background-color: rgba(88, 55, 55, 0.315);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: end;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.right-overlay img,
+.left-overlay img {
+  position: relative;
+  top: 70px;
+}
+
+.header-second-section {
+  font-size: 70px;
+  margin-bottom: 10px;
+  font-family: "catLogoFont";
+  transition: color 100ms ease-in;
+}
+
+.header-second-section:hover {
+  color: white;
+}
+
+.subheading-second-section {
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  overflow: hidden;
+}
+
+.intro-second-section {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 10px 80px;
+  word-spacing: 2px;
+  line-height: 1.4;
+  color: rgb(18, 18, 18);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 1px 10px 10px black;
+}
+
+.button-second-section {
+  display: flex;
+  justify-content: center;
+}
+
+.button-entry-second-section {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 1px 10px 10px black;
+  border: 1px solid black;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 40px;
+}
+
+.button-entry-second-section a {
+  font-family: "catLogoFont";
+  color: white;
+}
+
+.button-entry-second-section:hover {
+  transform: translateY(-4px);
+}
+
+.button-entry-second-section a:hover {
+  color: black;
+}
+
+.cat-emoji-button img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+}
+
+.cat-emoji-button {
+  z-index: -50;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items:center;
+}
+
+
+.button-entry-second-section:hover .cat-emoji-button {
+  top: -40px;
+}
+@media (max-width: 550px) {
+  .second-section {
+    padding: 10px 10px;
+  }
+  .header-second-section {
+    font-size: 25px;
+  }
+  .subheading-second-section {
+    font-size: 20px;
+  }
+  .intro-second-section {
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+}

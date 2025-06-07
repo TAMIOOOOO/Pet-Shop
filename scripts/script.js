@@ -6,6 +6,8 @@ fetch("../html/header.html")
     const hamburger = document.querySelector(".hamburger");
     const sidebar = document.querySelector(".sidebar");
     const closeBtn = document.querySelector(".hamburger-closing");
+    const hamburgerFullScreen = document.querySelector(".hamburger-full-screen")
+    const userSide = document.querySelector(".user-second")
 
     hamburger?.addEventListener("click", () => {
       sidebar.classList.add("open");
@@ -14,4 +16,13 @@ fetch("../html/header.html")
     closeBtn?.addEventListener("click", () => {
       sidebar.classList.remove("open");
     });
+
+    hamburgerFullScreen?.addEventListener("click", () => {
+      userSide.classList.toggle("open");
+    });
+
+    userSide?.addEventListener("mouseleave", () => {
+      userSide.classList.remove("open");
+    });
+
   });

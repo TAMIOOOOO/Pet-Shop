@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Animation</title>
+  <style>
+    .typing {
+      font-family: monospace;
+      font-size: 24px;
+      white-space: nowrap;
+      border-right: 2px solid black;
+      width: fit-content;
+      overflow: hidden;
+      animation:  blink 1s infinite;
+    }
+
+    @keyframes blink {
+      20% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="typing" id="typing-text"></div>
+
+  <script>
+    const text = "Hello, I'm typing this!";
+    const typingElement = document.getElementById("typing-text");
+
+    function startTyping() {
+      let index = 0;
+      typingElement.textContent = "";
+
+      function typeNextChar() {
+        if (index < text.length) {
+          typingElement.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeNextChar, 100); // Typing speed
+        }
+      }
+
+      typeNextChar();
+    }
+
+    // Run the typing effect every 8 seconds
+    startTyping(); // Initial run
+    setInterval(startTyping, 4000); // Repeat every 8 seconds
+  </script>
+
+</body>
+</html>

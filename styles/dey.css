@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: serif;
+  line-height: 1.6;
+  background: #556d3d;
+  color: #white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #e7dad1;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background: #bbb89a;
+  color: #556d3d;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: #bbb89a;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer {
+  background: #green;
+  color: #556d3d;
+  text-align: center;
+  padding: 1px;
+  font-size: 10px;
+}
+
+.top {
+  display: flex;
+  align-content: center;
+}
+
+.greedy {
+  align-items: center;
+  margin-top: 5px;
+  font-family: serif;
+  padding: 15px;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.language , .languages {
+  background-color: #556d3d;
+  text-align: center;
+  font-family: serif;
+  color: white;
+  border-radius: 10px;
+}
+
+.languages {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.language {
+  font-size: 14px;
+  margin-left: 15px;
+  padding: 5px 0;
+}
+
+#about {
+  margin-bottom: 1px;
+}
+
+.top h3 {
+  margin-bottom: 8px;
+}
+
+.my_pets {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.Contacts p {
+  font-size: 10px;
+  display: flex;
+}

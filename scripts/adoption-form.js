@@ -53,6 +53,7 @@ function formValidation() {
         const relPhonePattern = /^\d{10}$/;
         if (!relPhonePattern.test(relPhone)) {
             alert('Please enter a 10 digit number');
+            return;
         }
 
         submittedModal();

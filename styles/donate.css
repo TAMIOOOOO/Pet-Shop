@@ -105,3 +105,31 @@ body {
   align-items: center;
   text-align: center;
 }
+
+@media (max-width:1300px) {
+  .sub-content-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .content-banner {
+    text-align: center;
+  }
+  .sides-content {
+    display: none;
+  }
+  .center-content-container {
+    background-color: red;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+}

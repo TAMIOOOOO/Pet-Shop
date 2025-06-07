@@ -6,20 +6,20 @@
 
 #adoption-form-container {
   position: relative;
-  background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  background-color: pink;
+  overflow: hidden;
 }
 
 .adoption-form {
   padding: 20px 10px 20px 10px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
   border: 1px solid black;
   width: 80%;
@@ -27,6 +27,20 @@
   border-radius: 25px;
   box-shadow: 0px 10px 10px black;
   flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.adoption-form-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 25px;
+  box-shadow: 0px 10px 10px black;
+  background-color: rgba(127, 255, 212, 0.471);
 }
 
 .adoption-form h2 {
@@ -34,18 +48,18 @@
   margin-bottom: 2em;
 }
 
-
 .adoption-form input {
   margin-bottom: 10px;
   outline: 0;
-  border: 0px solid transparent;
-  border-bottom: 2px solid black;
-  padding: 5px 5px 2px 5px;
-  height: 20px;
+  border: 2px solid black;
+  padding: 10px 7px 10px 7px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.23);
 }
 
-.adoption-form input.active {
-  border-bottom: 2px solid blue;
+.adoption-form input:focus {
+  border: 2px solid blue;
+  background-color: white;
 }
 
 .image-adoption-slider-container {
@@ -56,6 +70,8 @@
   align-items: center;
   gap: 20px;
   position: relative;
+  margin-top: 20px;
+  z-index: 1;
 }
 
 label {
@@ -66,6 +82,7 @@ label {
   overflow: hidden;
   height: 50%;
   width: 50%;
+  background-color: red;
 }
 
 .image-container img {
@@ -101,12 +118,11 @@ label {
   font-size: 15px;
 }
 
-
-
 .phone-email,
 .company-social,
 .status-history,
-.relationship-phone, .birthdate-occupation {
+.relationship-phone,
+.birthdate-occupation {
   display: flex;
   justify-content: space-around;
 }
@@ -118,7 +134,6 @@ label {
 .birthdate-input input {
   padding-left: 30px;
   padding-right: 30px;
-
 }
 
 .button button,
@@ -143,20 +158,109 @@ label {
   top: 0;
   background-color: rgba(0, 0, 0, 0.397);
   width: 100%;
-  height: 100%;
+  height: 120%;
   display: none;
   justify-content: center;
-  align-items: center;
 }
 
 .modal {
-  background-color: red;
+  gap: 10px;
+  background-color: white;
+  border-radius: 30px;
   width: 30%;
-  height: 40%;
+  height: 300px;
   display: flex;
+  position: relative;
+  top: 200px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 5px 20px black;
+}
+
+.modal img {
+  width: 100px;
+  height: 100px;
+}
+
+.paw {
+  width: 80px;
+  height: 80px;
+  z-index: -1;
+}
+
+.paws-image-background-1 {
+  position: relative;
+  right: 10px;
+}
+
+.paws-image-background-2 {
+  position: relative;
+  left: 450px;
+}
+.paws-image-background-3 {
+  position: relative;
+  right: 5px;
+  top: 78%;
+}
+.paws-image-background-4 {
+  position: relative;
+  left: 450px;
+  top: 78%;
+}
+
+.main-background-container {
+  background-color: pinc;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.sticker {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.sticker-1 {
+  left: 85%;
+  top: 70%;
+  animation: stickerMoves-1 5s ease-in-out infinite;
+}
+
+.sticker-2 {
+  left: 38%;
+  top: 20%;
+  animation: stickerMoves-2 3s ease-in-out infinite;
+}
+
+.sticker-3 {
+  right: 45%;
+  top: 70%;
+}
+
+@keyframes stickerMoves-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes stickerMoves-2 {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -191,17 +295,31 @@ label {
     padding: 0;
     flex-direction: column;
   }
-   .birthdayInput {
+  .birthdayInput {
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  .status-input input, .history-input input {
+  .status-input input,
+  .history-input input {
     display: flex;
     width: 100%;
     background-color: red;
     justify-content: space-between;
     margin-left: 20px;
   }
+  .adoption-form {
+    border: 0px;
+  }
+  .adoption-form-background {
+    width: 70%;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 200px;
+  }
 
+  .paws-image-background-2, .paws-image-background-4 {
+    position: relative;
+    left: 580px;
+  }
 }
